@@ -1,0 +1,50 @@
+.container {
+  height: 100%;
+  width: 500px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Arial", "Helvetica", "sans-serif";
+  text-align: center;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #ccc;
+  border-radius: 20%;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  display: inline-block;
+  position: relative;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.15);
+}
+
+.red {background-color: red;}
+
+.orange {background-color: orange;}
+
+.yellow {background-color: yellow;}
+
+.green {background-color: green}
+
+.blue {background-color: blue;}
+
+.purple {background-color: purple}
+
+.card-start {
+  background-color: black;
+}
+
+.restart {
+  display: none;
+  cursor: pointer;
+}
+
+.restart.visible {
+  display: block;
+}

@@ -1,0 +1,74 @@
+- start with cards faced down
+- event listeners: https://developer.mozilla.org/en-US/docs/Web/API/EventListener
+
+--- Rules
+1. Create Cards
+***************
+Start a new game; shuffle cards (optional)
+(done) Create a Game instance (concept used: closure)
+(done)- each new Game instance has access to its own set of private variables & methods
+Create instances of the Card class (concept used: OOP prototypes)
+- will have 12 cards (6 colors, 2 cards per color; red, orange, yellow, green, blue, purple)
+- a method to generate random positions on the grid
+- a method to "flip" the cards
+
+2. Comparison: Do they match? Handle Case: Yes or No
+*****************************************************
+Event Listener: onClick (concept used: callbacks)
+- track how many cards are selected to compare (max: 2 cards)
+- compare the card's data-attributes to see if they are the same PLUS check to see if they match the color in order
+- if the cards match, add 'card-matched' css to items, return a true boolean
+- if the cards don't match, add 'card-start' css to items, return a false boolean, resetting the two cards that don't match
+
+3. Check conditions (recursion optional)
+*******************************
+- need to be able to track completed matches throughout the duration of the game
+- repeat steps until game ends (all matched in order)
+- display a message with alert() or console.log() when game ends
+
+Bonus Features (optional)
+************************
+- Timer: how long it takes the user to match all the items
+- Flip the cards after matching and make the user match them in order
+
+--- Universal Variables
+    Local Storage Variables
+
+    cardChoice = 
+
+    firstCardSelectedColor = looks for color @ userCardChoice1 in cardsArray [position]
+    secondCardSelectedColor = looks for color @ userCardChoice2 in cardsArray [position]
+
+    cardMatch[@attempt#] = Boolean
+    How to determine value:
+
+    flipped[@specificCard#] = Boolean
+    How to determine value: True for cardsMatchedArray
+
+
+    gamePlayTime = [minutes,seconds]
+    How to determine value:
+
+
+
+    Greater Storage Variables
+    cardsArray = [1[position, color],[2[position, color],3[p, c]...12[p, c]] (key value pair?) (just color with the index serving as the position?)
+    cardsMatchedArray = []
+    gameWon = Boolean
+
+    Functions:
+
+        cardsMismatch {hides all cards}
+        invoked when: cardMatch = false
+
+        pushMatchedPairToMatchedArray {pushes matchedPair to cardsMatchedArray}
+        invoked when: cardMatch = true
+
+        endGame {creates celebratory message with gamePlayTime displayed}
+
+// firstCardSelected = looks for color in cardsArray @ [i] which == firstUserCardChoice
+// secondCardSelected = looks for color in cardsArray @ [i] which == secondUserCardChoice
+
+
+// cardMatch[@attempt#] = Boolean
+// How to determine value: True, if firstCardSelected == secondCardElected
